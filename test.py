@@ -6,7 +6,7 @@ import requests as re
 def getHtmlText2(url):
     try:
         s = re.Session()
-        kv = {'ldap':'auth', 'zjh':'2015082328', 'mm':'123456'}
+        kv = {'ldap':'auth', 'zjh':'账号', 'mm':'密码'}
         r1 = s.post('http://zhjw.dlnu.edu.cn/loginAction.do', data=kv, headers={'user-agent':'Mozilla/5.0'})
         r2 = s.get(url, params={'actionType':'17'}, headers={'user-agent':'Mozilla/5.0'})
         r1.raise_for_status()
